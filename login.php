@@ -12,8 +12,10 @@ if($result->num_rows > 0) {
     // output data of each row
     $row = mysqli_fetch_assoc($result);
     $hashedpwd = $row['pwd'];
+    $row['idnum'];
     if(password_verify($pwd, $hashedpwd)){//password_verify verifies the password against the hashed password
     $_SESSION['loggedIn'] = true;
+    $_SESSION['student_id'] =  $row['idnum'];
     header("Location: index12.php"); 
     exit;  
     }

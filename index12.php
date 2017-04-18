@@ -19,11 +19,11 @@ if(!$_SESSION['loggedIn']) {
         <![endif]-->
     <title>Main Page  </title>
     <!-- BOOTSTRAP CORE STYLE CSS -->
-    <link href="assets/css/bootstrap.css" rel="stylesheet" />
+    <link href="assets/css/bootstrap.css?<?php echo time(); ?>" rel="stylesheet" />
     <!-- FONT AWESOME STYLE CSS -->
-    <link href="assets/font-awesome-4.1.0/css/font-awesome.min.css" rel="stylesheet" />
+    <link href="assets/font-awesome-4.1.0/css/font-awesome.min.css?<?php echo time(); ?>" rel="stylesheet" />
     <!-- CUSTOM STYLE CSS -->
-    <link href="assets/css/style.css" rel="stylesheet" />    
+    <link href="assets/css/style.css?<?php echo time(); ?>" rel="stylesheet" />    
     <!-- GOOGLE FONT -->
     <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css' />
 	
@@ -101,13 +101,13 @@ if(!$_SESSION['loggedIn']) {
 					<textarea class="form-control" name="task_desc" rows="3"></textarea>
 			</div>
 			
-			<div class="form-group row">
+			<div class="form-group">
 					<label for="example-number-input" class="col-2 col-form-label">Number of pages</label>
 						<div class="col-10">
 							<input class="form-control" type="number" value="42" name="page_count">
 			</div>
 			
-			<div class="form-group row">
+			<div class="form-group">
 					<label for="example-number-input" class="col-2 col-form-label">Number of words</label>
 						<div class="col-10">
 							<input class="form-control" type="number" value="5000" name="word_count">
@@ -174,17 +174,23 @@ if(!$_SESSION['loggedIn']) {
 				
 		
 			</div>
-  
-			<div class="form-group row">
+			
+			<div class="form-group">
+					<label for="example-number-input" class="col-2 col-form-label">Number of pages</label>
+						<div class="col-10">
+							<input class="form-control" type="number" value="42" name="page_count">
+			</div>
+			
+			<div class="form-group"><br>
 				<label for="example-date-input" class="col-2 col-form-label">Date for task to be claimed</label>
 					<div class="col-10">
-						<input class="form-control" type="date"  name="claimdate">
+						<input class="form-control" type="date"  name="claimed_at">
 			</div>
  
-			<div class="form-group row">
+			<div class="form-group">
 				<label for="example-date-input" class="col-2 col-form-label">Date for task to be completed</label>
 					<div class="col-10">
-						<input class="form-control" type="date"  name="enddate">
+						<input class="form-control" type="date"  name="completed_at">
 			</div>
  
 			  <br>
@@ -229,16 +235,16 @@ if(!$_SESSION['loggedIn']) {
                     <h1>TASKS </h1>
 					<br><br>
                </div>
-			   <iframe src="http://localhost/tasks.php"  
-		style="width:100%;
- float:center;
- height:100%;
- padding:10px;
- position:relative;
- overflow-x:hidden;
- overflow-y:visible;
- border:none;
- background-color:white;" >Tasks</iframe>
+			   <iframe src="http://testweb3.csisad.ul.campus/modules/cs4014/15152669/tasks.php"  
+				style="width:100%;
+				 float:center;
+				 height:100%;
+				 padding:10px;
+				 position:relative;
+				 overflow-x:hidden;
+				 overflow-y:visible;
+				 border:none;
+				 background-color:white;" >Tasks</iframe>
                      </div>
           </section> 
     <!--END ABOUT SECTION-->
@@ -259,29 +265,15 @@ if(!$_SESSION['loggedIn']) {
         </div>
 		<h3> How to reach us! </h3>
 
-<pre>
- </p>
+
           
-          <div class="add"><i>Number:</i>061 202368
-Email:</i>15142151@studentmail.ie
- <i>Address:</i>B2005,Main Building, University of Limerick, Ireland
-   </div>
-      <h3> Our Location </h3>
+          <div class="add">
+		Number: 061 202368<br>
+		Email: 15142151@studentmail.ie<br>
+		Address: B2005,Main Building, University of Limerick, Ireland<br>
+		</div>
+ 
 
-<div id="map" style="width:100%;height:500px"></div>
-
-<script>
-function myMap() {
-  var myCenter = new google.maps.LatLng(52.6678,-8.5767);
-  var mapCanvas = document.getElementById("map");
-  var mapOptions = {center: myCenter, zoom: 14};
-  var map = new google.maps.Map(mapCanvas, mapOptions);
-  var marker = new google.maps.Marker({position:myCenter});
-  marker.setMap(map);
-}
-</script>
-
-<script src="https://maps.googleapis.com/maps/api/js?callback=myMap"></script>
 
   
        

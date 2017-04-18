@@ -11,11 +11,6 @@ body {
   font-family: 'Titillium Web', sans-serif;  /*actual background for webpage */
 }
 
-.checkbox-grid li {
-    display: block;
-    float: left;
-    width: 25%;
-}
 
 h1 {
   text-align: center;
@@ -88,6 +83,25 @@ textarea {
 .button-block {
   display: block;
   width: 100%;
+}
+
+.field-wrap {
+  position: relative;
+  margin-bottom: 40px;
+}
+
+.top-row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.top-row > div {
+  float: left;
+  width: 48%;
+  margin-right: 4%;
+}
+.top-row > div:last-child {
+  margin: 0;
 }
 
 

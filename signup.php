@@ -8,6 +8,8 @@ $first = $_POST['first'];
 $last = $_POST['last'];
 $idnum = $_POST['idnum'];
 $email = $_POST['email'];
+$tags_as_array = $_POST['usertags'];
+$task_as_string = implode(", ",$tags_as_array);
 $user_subject = $_POST['user_subject'];
 $pwd = $_POST['pwd'];
 $hashedPassword = password_hash($pwd,PASSWORD_BCRYPT);
@@ -22,8 +24,8 @@ echo "<br>";
 echo "<br>";
 echo("<button onclick=\"location.href='index1.php'\">REGISTER</button>");
 }else{
-$sql = "INSERT INTO user1 (first, last, idnum, email, user_subject, pwd) 
-VALUES ('$first', '$last', '$idnum', '$email', '$user_subject', '$hashedPassword')";
+$sql = "INSERT INTO user1 (first, last, idnum, email, user_subject, pwd, user_tags) 
+VALUES ('$first', '$last', '$idnum', '$email', '$user_subject', '$hashedPassword', '$task_as_string')";
 $result = $conn->query($sql);
 
 	echo("You have successfully registered.");

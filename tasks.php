@@ -8,17 +8,12 @@
 	
 		$sql= "SELECT * FROM task;";
 		$result = $conn->query($sql);
-		echo '<table cellspacing="20" cellpadding="3"><tr><th>Tasks</th>
+		echo '<table cellspacing="18" cellpadding="1"><tr><th>Tasks</th>
 		<th>Title</th>
+		<th></th>
 		<th>Type</th>
-		<th>Description</th>
 		<th></th>
-		<th></th>
-		<th>Tags</th>
-		<th></th>
-		<th>Page count</th>
-		<th>Word count</th>
-		<th>File format</th>';
+		<th>Claim task</th>';
 		while ($column = mysqli_fetch_array($result))
 		{
 		$task_id = $column['task_id'];
@@ -29,19 +24,20 @@
 		$page_count = $column['page_count'];
 		$word_count = $column['word_count']; 
 		$file_format = $column['file_format'];
+		$claimed_at = $column['claimed_at'];
+		$completed_at = $column['completed_at'];
+        $url = $column['url'];
 						
 		echo  "<tr><td>$task_id</td>
 		<td>$task_title</td>
+		<td></td>
 		<td>$task_type</td>
-		<td>$task_desc</td>
-		<td></td>
-		<td></td>
-		<td>$task_tags</td>
-		<td></td>
-		<td>$page_count</td>
-		<td>$word_count</td>
-		<td>$file_format</td></tr>";
 		
+		<td></td>
+        <td><button type='button' onclick=\"location.href='".$url."'\">Claim</button></td>
+		<td></td>
+		<td><button type='button' onclick=\"location.href='http://testweb3.csisad.ul.campus/modules/cs4014/15152669/options.php?task_id=$task_id'\">More Information</button></td>";
+            
 		}
 		
 		echo "</table>";

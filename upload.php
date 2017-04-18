@@ -7,12 +7,19 @@ if(!$_SESSION['loggedIn']) {
 }
 include 'dbh.php';
 
+
+
+$student_id = $_SESSION['student_id']; //gets idnum to be inserted into id in task table
 $task_title = $_POST['task_title'];
 $task_type = $_POST['task_type'];
 $task_desc = $_POST['task_desc'];
+$task_tags_array = $_POST['task_tags'];
+$task_tags_string = implode(", ",$task_tags_array); // Converting the array to a string, displaying selected tags
 $page_count = $_POST['page_count'];
 $word_count = $_POST['word_count']; 
-$file_format = $_POST['file_format']; 
+$file_format = $_POST['file_format'];
+$claimed_at = $_POST['claimed_at'];
+$completed_at = $_POST['completed_at']; 
 
 
 if(isset($_FILES['doc'])){
@@ -21,8 +28,9 @@ if(isset($_FILES['doc'])){
       $file_size =$_FILES['doc']['size'];
       $file_tmp =$_FILES['doc']['tmp_name'];
       $file_type=$_FILES['doc']['type'];
-      $file_ext=strtolower(end(explode('.',$_FILES['doc']['name'])));
-	 $uploads_dir = 'C:/Users/Darragh/Desktop';
+	  $tmp = explode ('.',$file_name);
+      $file_ext=strtolower(end($tmp));
+	  $uploads_dir ='uploads/';
       
       $expensions= array("docx","doc","pdf","txt","sxw","stw");
       
@@ -31,19 +39,33 @@ if(isset($_FILES['doc'])){
       }
       
      if(empty($errors)==true){
-         move_uploaded_file($file_tmp, 'upload/' .$file_name);
-         echo "Success";
+        
+         $file_name_new = uniqid('',true) . '.' . $file_ext; // create a unique name for the document
+         $url = $uploads_dir.$file_name_new;
+         move_uploaded_file($file_tmp, $url);
+         echo "Well done.";
       }else{
          print_r($errors);
       }
 	  
    }
 
-$sql = "INSERT INTO task (task_title, task_type, task_desc, page_count, word_count, file_format) 
-VALUES ('$task_title', '$task_type', '$task_desc', '$page_count', '$word_count', '$file_format')";
-$result = $conn->query($sql);
+$sql = "INSERT INTO task (task_title, task_type, task_desc, task_tags, page_count, word_count, file_format, claimed_at, completed_at, url, id) 
+VALUES ('$task_title', '$task_type', '$task_desc', '$task_tags_string', '$page_count', '$word_count', '$file_format', '$claimed_at', '$completed_at', '$url', '$student_id')";
+
+if(!$conn->query($sql)) {
+    printf("Error:%s\n", $conn->error);
+}
 
 
+$sql = "DELETE FROM task WHERE completed_at <= CURDATE()"; //checks to see if completed at date has been passed, if so deletes from the table
+
+if(!$conn->query($sql)) {
+    printf("Error:%s\n", $conn->error);
+}
+
+
+echo "<br>";
 echo("You have successfully uploaded.");
 echo "<br>";
 echo "<br>";
