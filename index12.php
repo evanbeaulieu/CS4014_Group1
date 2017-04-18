@@ -7,8 +7,8 @@ if(!$_SESSION['loggedIn']) {
 ?>
 
 
-<!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml">
+<!DOCTYPE html >
+<html xmlns="http://www.w3.org/1999/xhtml" >
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
@@ -19,11 +19,11 @@ if(!$_SESSION['loggedIn']) {
         <![endif]-->
     <title>Main Page  </title>
     <!-- BOOTSTRAP CORE STYLE CSS -->
-    <link href="assets/css/bootstrap.css?<?php echo time(); ?>" rel="stylesheet" />
+    <link href="assets/css/bootstrap.css?ts=<?=time()?>&quot;" rel="stylesheet" />
     <!-- FONT AWESOME STYLE CSS -->
-    <link href="assets/font-awesome-4.1.0/css/font-awesome.min.css?<?php echo time(); ?>" rel="stylesheet" />
+    <link href="assets/font-awesome-4.1.0/css/font-awesome.min.css?ts=<?=time()?>&quot;" rel="stylesheet" />
     <!-- CUSTOM STYLE CSS -->
-    <link href="assets/css/style.css?<?php echo time(); ?>" rel="stylesheet" />    
+    <link href="assets/css/style.css?ts=<?=time()?>&quot;" rel="stylesheet" />    
     <!-- GOOGLE FONT -->
     <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css' />
 	
@@ -58,6 +58,7 @@ if(!$_SESSION['loggedIn']) {
     </div>
    <!--END NAVBAR SECTION-->
         <!--HOME SECTION-->
+		
        <section id="home" class="text-center">
             <div class="container">
            <div class="row text-center pad-top" >
@@ -65,7 +66,7 @@ if(!$_SESSION['loggedIn']) {
                 <h1>Welcome to Scribe_Check  </h1>
 				<br></br>
                 <img src="pic.png" alt="document" style="width:250px;height:200px;">
-                
+               
 				<h3>About Us</h3>
                 <p class="col-md-8 col-md-offset-2">
  The purpose of our website is to provide an online service for college students who are looking for their work to be corrected/reviewed
@@ -220,12 +221,7 @@ if(!$_SESSION['loggedIn']) {
 		
 		
     <!--END task SECTION-->
-		
-		
-		
-    <!--END task SECTION-->
-    <!--ABOUT SECTION-->
-	<br></br>
+		<br></br>
 	<br></br>
 	
         <section id="about"  >
@@ -235,18 +231,17 @@ if(!$_SESSION['loggedIn']) {
                     <h1>TASKS </h1>
 					<br><br>
                </div>
-			   <iframe src="http://testweb3.csisad.ul.campus/modules/cs4014/15152669/tasks.php"  
-				style="width:100%;
-				 float:center;
-				 height:100%;
-				 padding:10px;
-				 position:relative;
-				 overflow-x:hidden;
-				 overflow-y:visible;
-				 border:none;
-				 background-color:white;" >Tasks</iframe>
+			   <iframe src="http://localhost/tasks.php" width="100%" height="100%"
+		style="	float:center;
+				border:none;
+				background-color:white;" >Tasks</iframe>
                      </div>
           </section> 
+		
+		
+    <!--END task SECTION-->
+    <!--ABOUT SECTION-->
+	
     <!--END ABOUT SECTION-->
     <!--CONTACT SECTION-->
          <section id="contact">
@@ -265,19 +260,28 @@ if(!$_SESSION['loggedIn']) {
         </div>
 		<h3> How to reach us! </h3>
 
-
-          
-          <div class="add">
+    
+          <div class="add" >
 		Number: 061 202368<br>
 		Email: 15142151@studentmail.ie<br>
 		Address: B2005,Main Building, University of Limerick, Ireland<br>
 		</div>
- 
+		<script>
+			function googleTranslateElementInit() {
+			new google.translate.TranslateElement({
+			pageLanguage: 'en',
+			layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+			}, 'google_translate_element');
+			}
+			</script><script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 
+
+		<div id="google_translate_element"></div>
 
   
        
          </section>
+		 
    
      <!--FOOTER SECTION-->
     <!-- JAVASCRIPT FILES PLACED AT THE BOTTOM TO REDUCE THE LOADING TIME  -->
