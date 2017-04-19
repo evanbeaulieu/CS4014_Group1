@@ -7,8 +7,8 @@ if(!$_SESSION['loggedIn']) {
 ?>
 
 
-<!DOCTYPE html >
-<html xmlns="http://www.w3.org/1999/xhtml" >
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
@@ -19,11 +19,11 @@ if(!$_SESSION['loggedIn']) {
         <![endif]-->
     <title>Main Page  </title>
     <!-- BOOTSTRAP CORE STYLE CSS -->
-    <link href="assets/css/bootstrap.css?ts=<?=time()?>&quot;" rel="stylesheet" />
+    <link href="assets/css/bootstrap.css?<?php echo time(); ?>" rel="stylesheet" />
     <!-- FONT AWESOME STYLE CSS -->
-    <link href="assets/font-awesome-4.1.0/css/font-awesome.min.css?ts=<?=time()?>&quot;" rel="stylesheet" />
+    <link href="assets/font-awesome-4.1.0/css/font-awesome.min.css?<?php echo time(); ?>" rel="stylesheet" />
     <!-- CUSTOM STYLE CSS -->
-    <link href="assets/css/style.css?ts=<?=time()?>&quot;" rel="stylesheet" />    
+    <link href="assets/css/style.css?<?php echo time(); ?>" rel="stylesheet" />    
     <!-- GOOGLE FONT -->
     <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css' />
 	
@@ -58,7 +58,6 @@ if(!$_SESSION['loggedIn']) {
     </div>
    <!--END NAVBAR SECTION-->
         <!--HOME SECTION-->
-		
        <section id="home" class="text-center">
             <div class="container">
            <div class="row text-center pad-top" >
@@ -66,7 +65,7 @@ if(!$_SESSION['loggedIn']) {
                 <h1>Welcome to Scribe_Check  </h1>
 				<br></br>
                 <img src="pic.png" alt="document" style="width:250px;height:200px;">
-               
+                
 				<h3>About Us</h3>
                 <p class="col-md-8 col-md-offset-2">
  The purpose of our website is to provide an online service for college students who are looking for their work to be corrected/reviewed
@@ -99,7 +98,7 @@ if(!$_SESSION['loggedIn']) {
   
 			<div class="form-group">
 					<label for="exampleTextarea">Brief Description of Task</label>
-					<textarea class="form-control" name="task_desc" rows="3"></textarea>
+					<textarea class="form-control" name="task_desc" rows="2"></textarea>
 			</div>
 			
 			<div class="form-group">
@@ -126,59 +125,126 @@ if(!$_SESSION['loggedIn']) {
 			</div>
 			
 		
-		<div class="form-group">
-			<label>Tags</label>		
-		<ul class="checkbox-grid" style="list-style-type: none;">
+		<div align="center">
+<label for='task_tag'>Tags</label><br>		
+		<select name="task_tags">
 		
+				<option  value="Sociology"  >Sociology</li>
+				<option  value="Politics"  >Politics</li>
+				<option  value="History"  >History</li>
+				<option  value="Mathematics" >Mathematics</li>
+				<option  value="Prose" >Prose</li>
+				<option  value="Poetry" >Poetry</li>
+				<option	value="Languages" >Languages</li>
+				<option value="Media" >Media</li>
+				<option  value="Philosophy" >Philosophy</li>
+				<option  value="Physics" >Physics</li>
+				<option value="Chemistry" >Chemistry</li>
+				<option value="Programming" >Programming</li>
+				<option value="Biology"  >Biology</li>
+				<option value="Astrology"  >Astrology</li>
+				<option value="Law" >Law</li>
+				<option value="Accounting" >Accounting</li>
+				<option value="Economics" >Economics</li>
+				<option value="Management" >Management</li>
+				<option value="Taxation" >Taxation</li>
+				<option value="Networking" >Networking</li>
+				<option value="Software Design" >Software Design</li>
+				<option value="Hardware Design" >Hardware Design</li>
+				<option value="App Design" >App Design</li>
+				<option value="Website Design" >Website Design</li>
+		</select>
 		
-				<li><input type="checkbox" name="task_tags[]" value="Sociology" onclick='chkcontrol(0)'; >Sociology</li>
-				<li><input type="checkbox" name="task_tags[]" value="Politics" onclick='chkcontrol(1)'; >Politics</li>
-				<li><input type="checkbox" name="task_tags[]" value="History" onclick='chkcontrol(2)'; >History</li>
-				<li><input type="checkbox" name="task_tags[]" value="Mathematics" onclick='chkcontrol(3)'; >Mathematics</li>
+		<select name="task_tags">
+		
+				<option value="Sociology"  >Sociology</li>
+				<option value="Politics"  >Politics</li>
+				<option value="History"  >History</li>
+				<option value="Mathematics" >Mathematics</li>
+				<option value="Prose" >Prose</li>
+				<option value="Poetry" >Poetry</li>
+				<option	value="Languages" >Languages</li>
+				<option value="Media" >Media</li>
+				<option value="Philosophy" >Philosophy</li>
+				<option value="Physics" >Physics</li>
+				<option value="Chemistry" >Chemistry</li>
+				<option value="Programming" >Programming</li>
+				<option value="Biology"  >Biology</li>
+				<option value="Astrology"  >Astrology</li>
+				<option value="Law" >Law</li>
+				<option value="Accounting" >Accounting</li>
+				<option value="Economics" >Economics</li>
+				<option value="Management" >Management</li>
+				<option value="Taxation" >Taxation</li>
+				<option value="Networking" >Networking</li>
+				<option value="Software Design" >Software Design</li>
+				<option value="Hardware Design" >Hardware Design</li>
+				<option value="App Design" >App Design</li>
+				<option value="Website Design" >Website Design</li>
+		</select>
+		
+		<select name="task_tags">
+		
+				<option  value="Sociology"  >Sociology</li>
+				<option  value="Politics"  >Politics</li>
+				<option  value="History"  >History</li>
+				<option  value="Mathematics" >Mathematics</li>
+				<option  value="Prose" >Prose</li>
+				<option  value="Poetry" >Poetry</li>
+				<option	 value="Languages" >Languages</li>
+				<option  value="Media" >Media</li>
+				<option  value="Philosophy" >Philosophy</li>
+				<option value="Physics" >Physics</li>
+				<option value="Chemistry" >Chemistry</li>
+				<option  value="Programming" >Programming</li>
+				<option value="Biology"  >Biology</li>
+				<option  value="Astrology"  >Astrology</li>
+				<option value="Law" >Law</li>
+				<option value="Accounting" >Accounting</li>
+				<option value="Economics" >Economics</li>
+				<option value="Management" >Management</li>
+				<option value="Taxation" >Taxation</li>
+				<option value="Networking" >Networking</li>
+				<option  value="Software Design" >Software Design</li>
+				<option value="Hardware Design" >Hardware Design</li>
+				<option value="App Design" >App Design</li>
+				<option  value="Website Design" >Website Design</li>
+		</select>
+		
+		<select name="task_tags">
+		
+				<option  value="Sociology"  >Sociology</li>
+				<option  valuealue="Politics"  >Politics</li>
+				<option  value="History"  >History</li>
+				<option  value="Mathematics" >Mathematics</li>
+				<option  value="Prose" >Prose</li>
+				<option  value="Poetry" >Poetry</li>
+				<option	value="Languages" >Languages</li>
+				<option  value="Media" >Media</li>
+				<option  value="Philosophy" >Philosophy</li>
+				<option  value="Physics" >Physics</li>
+				<option  value="Chemistry" >Chemistry</li>
+				<option  value="Programming" >Programming</li>
+				<option  value="Biology"  >Biology</li>
+				<option  value="Astrology"  >Astrology</li>
+				<option  value="Law" >Law</li>
+				<option  value="Accounting" >Accounting</li>
+				<option value="Economics" >Economics</li>
+				<option value="Management" >Management</li>
+				<option value="Taxation" >Taxation</li>
+				<option value="Networking" >Networking</li>
+				<option value="Software Design" >Software Design</li>
+				<option  value="Hardware Design" >Hardware Design</li>
+				<option  value="App Design" >App Design</li>
+				<option  value="Website Design" >Website Design</li>
+		</select>
 			
-				
+		
 			
-				<li><input type="checkbox" name="task_tags[]" value="Prose" onclick='chkcontrol(4)'; >Prose</li>
-				<li><input type="checkbox" name="task_tags[]" value="Poetry" onclick='chkcontrol(5)'; >Poetry</li>
-				<li><input type="checkbox" name="task_tags[]" value="Languages" onclick='chkcontrol(6)'; >Languages</li>
-				<li><input type="checkbox" name="task_tags[]" value="Media" onclick='chkcontrol(7)'; >Media</li>
-			
-			
-			
-				<li><input type="checkbox" name="task_tags[]" value="Philosophy" onclick='chkcontrol(8)'; >Philosophy</li>
-				<li><input type="checkbox" name="task_tags[]" value="Physics" onclick='chkcontrol(9)'; >Physics</li>
-				<li><input type="checkbox" name="task_tags[]" value="Chemistry" onclick='chkcontrol(10)'; >Chemistry</li>
-				<li><input type="checkbox" name="task_tags[]" value="Programming" onclick='chkcontrol(11)'; >Programming</li>
-			
-				
-			
-				<li><input type="checkbox" name="task_tags[]" value="Biology" onclick='chkcontrol(12)'; >Biology</li>
-				<li><input type="checkbox" name="task_tags[]" value="Astrology" onclick='chkcontrol(13)'; >Astrology</li>
-				<li><input type="checkbox" name="task_tags[]" value="Law" onclick='chkcontrol(14)'; >Law</li>
-				<li><input type="checkbox" name="task_tags[]" value="Accounting" onclick='chkcontrol(15)'; >Accounting</li>
-			
-			
-			
-				<li><input type="checkbox" name="task_tags[]" value="Economics" onclick='chkcontrol(16)'; >Economics</li>
-				<li><input type="checkbox" name="task_tags[]" value="Management" onclick='chkcontrol(17)'; >Management</li>
-				<li><input type="checkbox" name="task_tags[]" value="Taxation" onclick='chkcontrol(18)'; >Taxation</li>
-				<li><input type="checkbox" name="task_tags[]" value="Networking" onclick='chkcontrol(19)'; >Networking</li>
-			
-				
-			
-				<li><input type="checkbox" name="task_tags[]" value="Software Design" onclick='chkcontrol(20)'; >Software Design</li>
-				<li><input type="checkbox" name="task_tags[]" value="Hardware Design" onclick='chkcontrol(21)'; >Hardware Design</li>
-				<li><input type="checkbox" name="task_tags[]" value="App Design" onclick='chkcontrol(22)'; >App Design</li>
-				<li><input type="checkbox" name="task_tags[]" value="Website Design" onclick='chkcontrol(23)'; >Website Design</li>
-			
-			
-			</ul>
-				
 			</div>
 			
-			
 			<div class="form-group">
-					<label for="example-number-input" class="col-2 col-form-label" ><br>Number of pages</label>
+					<label for="example-number-input" class="col-2 col-form-label">Number of pages</label>
 						<div class="col-10">
 							<input class="form-control" type="number" value="42" name="page_count">
 			</div>
@@ -189,7 +255,7 @@ if(!$_SESSION['loggedIn']) {
 						<input class="form-control" type="date"  name="claimed_at">
 			</div>
  
-			<div class="form-group"><br>
+			<div class="form-group">
 				<label for="example-date-input" class="col-2 col-form-label">Date for task to be completed</label>
 					<div class="col-10">
 						<input class="form-control" type="date"  name="completed_at">
@@ -222,7 +288,12 @@ if(!$_SESSION['loggedIn']) {
 		
 		
     <!--END task SECTION-->
-		<br></br>
+		
+		
+		
+    <!--END task SECTION-->
+    <!--ABOUT SECTION-->
+	<br></br>
 	<br></br>
 	
         <section id="about"  >
@@ -232,17 +303,18 @@ if(!$_SESSION['loggedIn']) {
                     <h1>TASKS </h1>
 					<br><br>
                </div>
-			   <iframe src="http://localhost/tasks.php" width="100%" height="100%"
-		style="	float:center;
-				border:none;
-				background-color:white;" >Tasks</iframe>
+			   <iframe src="http://localhost/tasks.php"  
+				style="width:100%;
+				 float:center;
+				 height:100%;
+				 padding:10px;
+				 position:relative;
+				 overflow-x:hidden;
+				 overflow-y:visible;
+				 border:none;
+				 background-color:white;" >Tasks</iframe>
                      </div>
           </section> 
-		
-		
-    <!--END task SECTION-->
-    <!--ABOUT SECTION-->
-	
     <!--END ABOUT SECTION-->
     <!--CONTACT SECTION-->
          <section id="contact">
@@ -261,28 +333,19 @@ if(!$_SESSION['loggedIn']) {
         </div>
 		<h3> How to reach us! </h3>
 
-    
-          <div class="add" >
+
+          
+          <div class="add">
 		Number: 061 202368<br>
 		Email: 15142151@studentmail.ie<br>
 		Address: B2005,Main Building, University of Limerick, Ireland<br>
 		</div>
-		<script>
-			function googleTranslateElementInit() {
-			new google.translate.TranslateElement({
-			pageLanguage: 'en',
-			layout: google.translate.TranslateElement.InlineLayout.SIMPLE
-			}, 'google_translate_element');
-			}
-			</script><script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+ 
 
-
-		<div id="google_translate_element"></div>
 
   
        
          </section>
-		 
    
      <!--FOOTER SECTION-->
     <!-- JAVASCRIPT FILES PLACED AT THE BOTTOM TO REDUCE THE LOADING TIME  -->

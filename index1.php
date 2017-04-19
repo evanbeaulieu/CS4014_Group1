@@ -9,7 +9,7 @@
 <title>Login/Register</title>
 
  <script src="Validate.js"></script><!-- Import the Validate.js file for use in the form-->
-      <link rel="stylesheet" type="text/css" href="assets/css/style1.css?ts=<?=time()?>&quot;" />
+      <link rel="stylesheet" type="text/css" href="style1.css?<?php echo time();?>" />
 
 </head>
 <body>
@@ -60,7 +60,85 @@
 	 <div class="field-wrap">
 	<div align="left">
 	<label for='usertag'>Select 4 of your prefered tags, by pressing ctrl:</label><br>
-<select name="usertags[]" multiple="multiple" size="4">
+<select name="usertags[]" >
+<option value="Sociology">Sociology</option>
+<option value="Politics">Politics</option>
+<option value="History">History</option>
+<option value="Prose">Prose</option>
+<option value="Poetry">Poetry</option>
+<option value="Languages">Languages</option>
+<option value="Media">Media</option>
+<option value="Philosophy">Philosophy</option>
+<option value="Physics">Physics</option>
+<option value="Chemistry">Chemistry</option>
+<option value="Biology">Biology</option>
+<option value="Astrology">Astrology</option>
+<option value="Law">Law</option>
+<option value="Accounting">Accounting</option>
+<option value="Economics">Economics</option>
+<option value="Managment">Managment</option>
+<option value="Taxation">Taxation</option>
+<option value="Software Design">Software Design</option>
+<option value="Website Design">Website Design</option>
+<option value="Hardware Design">Hardware Design</option>
+<option value="Mathematics">Mathematics</option>
+<option value="Programming">Programming</option>
+<option value="Networking">Networking</option>
+<option value="App Design">App Design</option>
+</select>
+<select name="usertags[]" >
+<option value="Sociology">Sociology</option>
+<option value="Politics">Politics</option>
+<option value="History">History</option>
+<option value="Prose">Prose</option>
+<option value="Poetry">Poetry</option>
+<option value="Languages">Languages</option>
+<option value="Media">Media</option>
+<option value="Philosophy">Philosophy</option>
+<option value="Physics">Physics</option>
+<option value="Chemistry">Chemistry</option>
+<option value="Biology">Biology</option>
+<option value="Astrology">Astrology</option>
+<option value="Law">Law</option>
+<option value="Accounting">Accounting</option>
+<option value="Economics">Economics</option>
+<option value="Managment">Managment</option>
+<option value="Taxation">Taxation</option>
+<option value="Software Design">Software Design</option>
+<option value="Website Design">Website Design</option>
+<option value="Hardware Design">Hardware Design</option>
+<option value="Mathematics">Mathematics</option>
+<option value="Programming">Programming</option>
+<option value="Networking">Networking</option>
+<option value="App Design">App Design</option>
+</select>
+<select name="usertags[]" >
+<option value="Sociology">Sociology</option>
+<option value="Politics">Politics</option>
+<option value="History">History</option>
+<option value="Prose">Prose</option>
+<option value="Poetry">Poetry</option>
+<option value="Languages">Languages</option>
+<option value="Media">Media</option>
+<option value="Philosophy">Philosophy</option>
+<option value="Physics">Physics</option>
+<option value="Chemistry">Chemistry</option>
+<option value="Biology">Biology</option>
+<option value="Astrology">Astrology</option>
+<option value="Law">Law</option>
+<option value="Accounting">Accounting</option>
+<option value="Economics">Economics</option>
+<option value="Managment">Managment</option>
+<option value="Taxation">Taxation</option>
+<option value="Software Design">Software Design</option>
+<option value="Website Design">Website Design</option>
+<option value="Hardware Design">Hardware Design</option>
+<option value="Mathematics">Mathematics</option>
+<option value="Programming">Programming</option>
+<option value="Networking">Networking</option>
+<option value="App Design">App Design</option>
+</select>
+<select name="usertags[]" >
 <option value="Sociology">Sociology</option>
 <option value="Politics">Politics</option>
 <option value="History">History</option>

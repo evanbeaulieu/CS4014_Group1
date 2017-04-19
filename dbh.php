@@ -1,6 +1,6 @@
 <?php
 
-$conn = mysqli_connect("testweb3.csisad.ul.campus", "group1", "idea-ENGINE-FEET-DISTANT", "group1");
+$conn = mysqli_connect("localhost", "root", "", "cs4014");
 
 if (!$conn) {
 	die("Connection failed: ".mysqli_connect_error());

@@ -41,7 +41,7 @@ if(isset($_FILES['doc'])){
      if(empty($errors)==true){
         
          $file_name_new = uniqid('',true) . '.' . $file_ext; // create a unique name for the document
-         $url = $uploads_dir.$file_name;
+         $url = $uploads_dir.$file_name_new;
          move_uploaded_file($file_tmp, $url);
          echo "Well done.";
       }else{
@@ -64,12 +64,12 @@ if(!$conn->query($sql)) {
     printf("Error:%s\n", $conn->error);
 }
 
-
 echo "<br>";
 echo("You have successfully uploaded.");
 echo "<br>";
 echo "<br>";
 echo("<button onclick=\"location.href='index12.php'\">Now return to homepage</button>");
+
 
 
 ?>
