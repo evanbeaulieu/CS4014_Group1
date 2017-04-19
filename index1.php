@@ -9,7 +9,7 @@
 <title>Login/Register</title>
 
  <script src="Validate.js"></script><!-- Import the Validate.js file for use in the form-->
-      <link rel="stylesheet" type="text/css" href="style1.css?<?php echo time();?>" />
+      <link rel="stylesheet" type="text/css" href="assets/css/style1.css?ts=<?=time()?>&quot;" />
 
 </head>
 <body>

@@ -41,7 +41,7 @@ if(isset($_FILES['doc'])){
      if(empty($errors)==true){
         
          $file_name_new = uniqid('',true) . '.' . $file_ext; // create a unique name for the document
-         $url = $uploads_dir.$file_name_new;
+         $url = $uploads_dir.$file_name;
          move_uploaded_file($file_tmp, $url);
          echo "Well done.";
       }else{

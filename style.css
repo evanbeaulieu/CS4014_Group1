@@ -1,6 +1,7 @@
 ﻿
 body {
     font-family: 'Open Sans', sans-serif;
+	background: #E8E8EE;
    
 }
 
@@ -11,9 +12,10 @@ body {
     cursor: pointer;
 }
 .checkbox-grid li {
-    display: block;
+    display: inline-block;
     float: left;
     width: 25%;
+	margin: 0;
 }
 
 p{

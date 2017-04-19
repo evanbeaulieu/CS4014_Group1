@@ -126,58 +126,59 @@ if(!$_SESSION['loggedIn']) {
 			</div>
 			
 		
-		<div>	
+		<div class="form-group">
+			<label>Tags</label>		
 		<ul class="checkbox-grid" style="list-style-type: none;">
+		
 		
 				<li><input type="checkbox" name="task_tags[]" value="Sociology" onclick='chkcontrol(0)'; >Sociology</li>
 				<li><input type="checkbox" name="task_tags[]" value="Politics" onclick='chkcontrol(1)'; >Politics</li>
 				<li><input type="checkbox" name="task_tags[]" value="History" onclick='chkcontrol(2)'; >History</li>
-				<li><input type="checkbox" name="task_tags[]" value="Mathematics" onclick='chkcontrol(6)'; >Mathematics</li>
+				<li><input type="checkbox" name="task_tags[]" value="Mathematics" onclick='chkcontrol(3)'; >Mathematics</li>
 			
 				
 			
-				<li><input type="checkbox" name="task_tags[]" value="Prose" onclick='chkcontrol(3)'; >Prose</li>
-				<li><input type="checkbox" name="task_tags[]" value="Poetry" onclick='chkcontrol(4)'; >Poetry</li>
-				<li><input type="checkbox" name="task_tags[]" value="Languages" onclick='chkcontrol(5)'; >Languages</li>
-				<li><input type="checkbox" name="task_tags[]" value="Media" onclick='chkcontrol(6)'; >Media</li>
+				<li><input type="checkbox" name="task_tags[]" value="Prose" onclick='chkcontrol(4)'; >Prose</li>
+				<li><input type="checkbox" name="task_tags[]" value="Poetry" onclick='chkcontrol(5)'; >Poetry</li>
+				<li><input type="checkbox" name="task_tags[]" value="Languages" onclick='chkcontrol(6)'; >Languages</li>
+				<li><input type="checkbox" name="task_tags[]" value="Media" onclick='chkcontrol(7)'; >Media</li>
 			
 			
 			
-				<li><input type="checkbox" name="task_tags[]" value="Philosophy" onclick='chkcontrol(0)'; >Philosophy</li>
-				<li><input type="checkbox" name="task_tags[]" value="Physics" onclick='chkcontrol(1)'; >Physics</li>
-				<li><input type="checkbox" name="task_tags[]" value="Chemistry" onclick='chkcontrol(2)'; >Chemistry</li>
-				<li><input type="checkbox" name="task_tags[]" value="Programming" onclick='chkcontrol(6)'; >Programming</li>
-			
-				
-			
-				<li><input type="checkbox" name="task_tags[]" value="Biology" onclick='chkcontrol(3)'; >Biology</li>
-				<li><input type="checkbox" name="task_tags[]" value="Astrology" onclick='chkcontrol(4)'; >Astrology</li>
-				<li><input type="checkbox" name="task_tags[]" value="Law" onclick='chkcontrol(5)'; >Law</li>
-				<li><input type="checkbox" name="task_tags[]" value="Accounting" onclick='chkcontrol(6)'; >Accounting</li>
-			
-			
-			
-				<li><input type="checkbox" name="task_tags[]" value="Economics" onclick='chkcontrol(0)'; >Economics</li>
-				<li><input type="checkbox" name="task_tags[]" value="Management" onclick='chkcontrol(1)'; >Management</li>
-				<li><input type="checkbox" name="task_tags[]" value="Taxation" onclick='chkcontrol(2)'; >Taxation</li>
-				<li><input type="checkbox" name="task_tags[]" value="Networking" onclick='chkcontrol(6)'; >Networking</li>
+				<li><input type="checkbox" name="task_tags[]" value="Philosophy" onclick='chkcontrol(8)'; >Philosophy</li>
+				<li><input type="checkbox" name="task_tags[]" value="Physics" onclick='chkcontrol(9)'; >Physics</li>
+				<li><input type="checkbox" name="task_tags[]" value="Chemistry" onclick='chkcontrol(10)'; >Chemistry</li>
+				<li><input type="checkbox" name="task_tags[]" value="Programming" onclick='chkcontrol(11)'; >Programming</li>
 			
 				
 			
-				<li><input type="checkbox" name="task_tags[]" value="Software Design" onclick='chkcontrol(3)'; >Software Design</li>
-				<li><input type="checkbox" name="task_tags[]" value="Hardware Design" onclick='chkcontrol(4)'; >Hardware Design</li>
-				<li><input type="checkbox" name="task_tags[]" value="App Design" onclick='chkcontrol(5)'; >App Design</li>
-				<li><input type="checkbox" name="task_tags[]" value="Website Design" onclick='chkcontrol(6)'; >Website Design</li>
+				<li><input type="checkbox" name="task_tags[]" value="Biology" onclick='chkcontrol(12)'; >Biology</li>
+				<li><input type="checkbox" name="task_tags[]" value="Astrology" onclick='chkcontrol(13)'; >Astrology</li>
+				<li><input type="checkbox" name="task_tags[]" value="Law" onclick='chkcontrol(14)'; >Law</li>
+				<li><input type="checkbox" name="task_tags[]" value="Accounting" onclick='chkcontrol(15)'; >Accounting</li>
+			
+			
+			
+				<li><input type="checkbox" name="task_tags[]" value="Economics" onclick='chkcontrol(16)'; >Economics</li>
+				<li><input type="checkbox" name="task_tags[]" value="Management" onclick='chkcontrol(17)'; >Management</li>
+				<li><input type="checkbox" name="task_tags[]" value="Taxation" onclick='chkcontrol(18)'; >Taxation</li>
+				<li><input type="checkbox" name="task_tags[]" value="Networking" onclick='chkcontrol(19)'; >Networking</li>
+			
+				
+			
+				<li><input type="checkbox" name="task_tags[]" value="Software Design" onclick='chkcontrol(20)'; >Software Design</li>
+				<li><input type="checkbox" name="task_tags[]" value="Hardware Design" onclick='chkcontrol(21)'; >Hardware Design</li>
+				<li><input type="checkbox" name="task_tags[]" value="App Design" onclick='chkcontrol(22)'; >App Design</li>
+				<li><input type="checkbox" name="task_tags[]" value="Website Design" onclick='chkcontrol(23)'; >Website Design</li>
 			
 			
 			</ul>
 				
-				
-		
 			</div>
 			
+			
 			<div class="form-group">
-					<label for="example-number-input" class="col-2 col-form-label">Number of pages</label>
+					<label for="example-number-input" class="col-2 col-form-label" ><br>Number of pages</label>
 						<div class="col-10">
 							<input class="form-control" type="number" value="42" name="page_count">
 			</div>
@@ -188,7 +189,7 @@ if(!$_SESSION['loggedIn']) {
 						<input class="form-control" type="date"  name="claimed_at">
 			</div>
  
-			<div class="form-group">
+			<div class="form-group"><br>
 				<label for="example-date-input" class="col-2 col-form-label">Date for task to be completed</label>
 					<div class="col-10">
 						<input class="form-control" type="date"  name="completed_at">
