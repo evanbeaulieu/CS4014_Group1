@@ -36,7 +36,7 @@
 		<td></td>
         <td><button type='button' onclick=\"location.href='".$url."'\">Claim</button></td>
 		<td></td>
-		<td><button type='button' onclick=\"location.href='http://localhost/options.php?task_id=$task_id'\">More Information</button></td>";
+		<td><button type='button' onclick=\"location.href='http://testweb3.csisad.ul.campus/modules/cs4014/group1/options.php?task_id=$task_id'\">More Information</button></td>";
             
 		}
 		

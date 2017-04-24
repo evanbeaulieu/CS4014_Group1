@@ -59,7 +59,7 @@
 	</select><br><br></div>
 	 <div class="field-wrap">
 	<div align="left">
-	<label for='usertag'>Select 4 of your prefered tags, by pressing ctrl:</label><br>
+	<label for='usertag'>Select 4 of your prefered tags:</label><br>
 <select name="usertags[]" >
 <option value="Sociology">Sociology</option>
 <option value="Politics">Politics</option>

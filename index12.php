@@ -88,34 +88,34 @@ if(!$_SESSION['loggedIn']) {
 		<form action="upload.php" method="post" enctype = "multipart/form-data">
 	<div class="form-group">
 			<label for="tasktitle">Task Title</label>
-    <input type="task" class="form-control" name="task_title"  placeholder="Enter task title">
+    <input type="task" class="form-control" name="task_title"  placeholder="Enter task title" required>
     </div>
 			<div class="form-group">
 				<label for="task_type">Task Type</label>
-				<input type="task" class="form-control" name="task_type"  placeholder="Enter task type (eg. MSc thesis, BSc dissertation, project report, PhD thesis, Assignment, Conference Research Paper etc">
+				<input type="task" class="form-control" name="task_type"  placeholder="Enter task type (eg. MSc thesis, BSc dissertation, project report, PhD thesis, Assignment, Conference Research Paper etc" required>
 			</div>
 			
   
 			<div class="form-group">
 					<label for="exampleTextarea">Brief Description of Task</label>
-					<textarea class="form-control" name="task_desc" rows="2"></textarea>
+					<textarea class="form-control" name="task_desc" rows="2" required></textarea>
 			</div>
 			
 			<div class="form-group">
 					<label for="example-number-input" class="col-2 col-form-label">Number of pages</label>
 						<div class="col-10">
-							<input class="form-control" type="number" value="42" name="page_count">
+							<input class="form-control" type="number" value="42" name="page_count" required>
 			</div>
 			
 			<div class="form-group">
 					<label for="example-number-input" class="col-2 col-form-label">Number of words</label>
 						<div class="col-10">
-							<input class="form-control" type="number" value="5000" name="word_count">
+							<input class="form-control" type="number" value="5000" name="word_count" required>
 			</div>
 			
 			<div class="form-group">
 				<label for="exampleSelect1">File Type</label>
-					<select class="form-control" name="file_format">
+					<select class="form-control" name="file_format" required>
 						<option>.docx</option>
 						<option>.doc</option>
 						<option>open office</option>
@@ -126,8 +126,8 @@ if(!$_SESSION['loggedIn']) {
 			
 		
 		<div align="center">
-<label for='task_tag'>Tags</label><br>		
-		<select name="task_tags">
+<label for='task_tag'>Tags</label><br><br>	
+		<select name="task_tags[]">
 		
 				<option  value="Sociology"  >Sociology</li>
 				<option  value="Politics"  >Politics</li>
@@ -155,7 +155,7 @@ if(!$_SESSION['loggedIn']) {
 				<option value="Website Design" >Website Design</li>
 		</select>
 		
-		<select name="task_tags">
+		<select name="task_tags[]">
 		
 				<option value="Sociology"  >Sociology</li>
 				<option value="Politics"  >Politics</li>
@@ -183,7 +183,7 @@ if(!$_SESSION['loggedIn']) {
 				<option value="Website Design" >Website Design</li>
 		</select>
 		
-		<select name="task_tags">
+		<select name="task_tags[]">
 		
 				<option  value="Sociology"  >Sociology</li>
 				<option  value="Politics"  >Politics</li>
@@ -211,7 +211,7 @@ if(!$_SESSION['loggedIn']) {
 				<option  value="Website Design" >Website Design</li>
 		</select>
 		
-		<select name="task_tags">
+		<select name="task_tags[]">
 		
 				<option  value="Sociology"  >Sociology</li>
 				<option  valuealue="Politics"  >Politics</li>
@@ -242,28 +242,28 @@ if(!$_SESSION['loggedIn']) {
 		
 			
 			</div>
-			
+			<br>
 			<div class="form-group">
 					<label for="example-number-input" class="col-2 col-form-label">Number of pages</label>
 						<div class="col-10">
-							<input class="form-control" type="number" value="42" name="page_count">
+							<input class="form-control" type="number" value="42" name="page_count" required>
 			</div>
 			
 			<div class="form-group"><br>
-				<label for="example-date-input" class="col-2 col-form-label">Date for task to be claimed</label>
+				<label for="example-date-input" class="col-2 col-form-label" >Date for task to be claimed</label>
 					<div class="col-10">
-						<input class="form-control" type="date"  name="claimed_at">
+						<input class="form-control" type="date"  name="claimed_at" required>
 			</div>
  
 			<div class="form-group">
-				<label for="example-date-input" class="col-2 col-form-label">Date for task to be completed</label>
+				<label for="example-date-input" class="col-2 col-form-label" >Date for task to be completed</label>
 					<div class="col-10">
-						<input class="form-control" type="date"  name="completed_at">
+						<input class="form-control" type="date"  name="completed_at" required>
 			</div>
  
 			  <br>
 					<label class="custom-file-upload">
-						<input type="file" name="doc"/>
+						<input type="file" name="doc" required/>
 					</label>
 		
 				<input type="submit" name="submit">  
@@ -303,7 +303,7 @@ if(!$_SESSION['loggedIn']) {
                     <h1>TASKS </h1>
 					<br><br>
                </div>
-			   <iframe src="http://localhost/tasks.php"  
+			   <iframe src="http://testweb3.csisad.ul.campus/modules/cs4014/group1/tasks.php"  
 				style="width:100%;
 				 float:center;
 				 height:100%;

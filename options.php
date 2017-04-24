@@ -46,7 +46,7 @@ $id = $_GET['task_id']; //call on the task_id value
 		<td>$file_format</td>
 		<td>$claimed_at</td>
 		<td>$completed_at</td>
-		<td><button type='button' onclick=\"location.href='http://localhost/tasks.php'\">Back</button></td></tr>";
+		<td><button type='button' onclick=\"location.href='http://testweb3.csisad.ul.campus/modules/cs4014/group1/tasks.php'\">Back</button></td></tr>";
             
 		}
 		
