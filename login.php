@@ -5,7 +5,7 @@ $email = $_POST['email'];
 $pwd = $_POST['pwd'];
 
 //Cant query on pwd because this is the unhashed password. We can query on email because it will be unique.
-$sql = "SELECT * FROM user1 WHERE email='$email'";
+$sql = "SELECT * FROM user1 WHERE email='$email' AND user_rep < 40";
 $result = $conn->query($sql);
 
 if($result->num_rows > 0) {
