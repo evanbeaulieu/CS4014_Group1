@@ -13,24 +13,29 @@
 
 </head>
 <body>
-<h1> Scribe-Check </h1>
+<h1> Scribe-Check User login</h1>
 <p class="Intro"> The purpose of our website is to provide an online service for people enrolled in UL, who are looking for their work to be corrected/reviewed. </p>
 
 <div class="form">
  <div class="field-wrap">
+ <h1>User login below:</h1>
 <form action="login.php" method="POST">
 	<input type="text" name="email" placeholder="Email"><br>
 	<input type="password" name="pwd" placeholder="Password">
 </div>
-	<button type="submit" class="button button-block">LOGIN</button>
+	<button type="submit" class="button button-block">USER LOGIN</button>
+	
 </form>
-
+<br>
+<p>Users who have a user rep of greater than or equal to 40 can use the Moderator login.</p>
+<br>
+<button class="button button-block" onclick=location.href='admin_loginpage.php'>Moderator Login</button>
 
 
 
 
 <br><br><br>
-
+<h1>Register below:</h1>
 <form action="signup.php" method="POST">
 	<div class="top-row">
 	<div class="field-wrap">
