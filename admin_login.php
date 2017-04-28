@@ -26,7 +26,10 @@ if($result->num_rows > 0) {
     }
 }
 
-echo "Your email or password is incorrect!";
+echo "You are not aloud login here with a user reputation of less than 40!"; 
+echo "<br>";
+echo "<br>";
+echo"Please check your email and password again or login using the user login";
 echo "<br>";
 echo "<br>";
 echo("<button onclick=\"location.href='admin_loginpage.php'\">BACK</button>"); 
