@@ -34,6 +34,10 @@ echo("You have successfully registered.");
 	echo "<br>";
 	echo "<br>";
 echo("<button onclick=\"location.href='index1.php'\">NOW LOGIN</button>");  } 
+echo "<br>";
+	echo "<br>";
+if(!$conn->query($sql)) {
+printf("Error:%s\n", $conn->error);}
 
 /*
 if(!$conn->query($sql)) {
