@@ -18,13 +18,16 @@
 
 <div class="form">
  <div class="field-wrap">
+ <h1>User login below:</h1>
 <form action="login.php" method="POST">
 	<input type="text" name="email" placeholder="Email"><br>
 	<input type="password" name="pwd" placeholder="Password">
 </div>
-	<button type="submit" class="button button-block">LOGIN</button>
+	<button type="submit" class="button button-block">USER LOGIN</button>
 	
 </form>
+<br>
+<p>Users who have a user rep of greater than or equal to 40 can use the Moderator login.</p>
 <br>
 <button class="button button-block" onclick=location.href='admin_loginpage.php'>Moderator Login</button>
 
@@ -32,26 +35,26 @@
 
 
 <br><br><br>
-
+<h1>Register below:</h1>
 <form action="signup.php" method="POST">
 	<div class="top-row">
 	<div class="field-wrap">
-	<input type="text" name="first" placeholder="Firstname" required>
+	<input type="text" name="first" placeholder="Firstname"  maxlength="15" required>
 	</div>
 	 <div class="field-wrap">
-	<input type="text" name="last" placeholder="Lastname" required>
+	<input type="text" name="last" placeholder="Lastname"  maxlength="20" required>
 	</div>
 	</div>
 	 <div class="field-wrap">
-	<input type="text" name="idnum" placeholder="Student/Staff ID Number"  pattern="\d{1,8}" title="Only digits" required>
+	<input type="text" name="idnum" id="idnum" placeholder="Student/Staff ID Number" minlength="8" maxlength="8" pattern="\d{1,8}" title="Only digits" required>
 	</div>
 	 <div class="field-wrap">
-	<input id="email" type="email" name="email" placeholder="Please enter a UL email 'ul.ie'" pattern="[a-zA-Z0-9]+@(studentmail.ul|ul)\.ie"  title="Only UL.ie emails" required>
+	<input id="email" type="email" name="email" placeholder="Please enter a UL email 'ul.ie'" pattern="[a-zA-Z0-9-_\.]+@(studentmail.ul|ul)\.ie"  title="Only UL.ie emails" required>
 	</div>
 	<div class="top-row">
 	 <div class="field-wrap">
 	<label for='user_subject'>Select the department that best suits you:</label><br>
-	<select multiple="multiple" name="user_subject">
+	<select name="user_subject">
 		<option value="Engineering">Engineering Dept</option>
 		<option value="Business">Business Dept</option>
 		<option value="Nursing">Nursing Dept</option>
@@ -169,11 +172,12 @@
 </div>
 </div>
 </div>
+<br>
  <div class="field-wrap">
-	<input type="password" id="pwd" name="pwd" placeholder="Password" required>
+	<input type="password" id="pwd" name="pwd" placeholder="Password" minlength="5" required>
 	</div>
  <div class="field-wrap">
-	<input type="password" id="pwd2" name="pwd2" placeholder="Re-enter Password" required>
+	<input type="password" id="pwd2" name="pwd2" placeholder="Re-enter Password" minlength="5" required>
 </div>
 	<button type="submit" class="button button-block" onclick="return checkPwd(form);">SIGN UP</button>
     <!-- Call the checkPwd() function in the Validate.js file to check passwords-->

@@ -11,7 +11,7 @@ $id = $_GET['task_id']; //call on the task_id value
 		$sql= "SELECT * FROM task WHERE task_id = $id"; //select file only for that task
 		$result = $conn->query($sql);
 
-		echo '<table cellspacing="15" cellpadding="15">
+		echo '<table cellspacing="16" cellpadding="16">
 		<tr><th>Tasks</th>
 		<th>Description</th>
 		<th></th>

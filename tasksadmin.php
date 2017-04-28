@@ -28,6 +28,7 @@
 		$completed_at = $column['completed_at'];
         $url = $column['url'];
 						
+		$sql= "INSERT into user_rep '+10';";				
 		echo  "<tr><td>$task_id</td>
 		<td>$task_title</td>
 		<td></td>

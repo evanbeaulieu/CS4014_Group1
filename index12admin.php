@@ -26,7 +26,11 @@ if(!$_SESSION['loggedIn']) {
     <link href="assets/css/style.css?<?php echo time(); ?>" rel="stylesheet" />    
     <!-- GOOGLE FONT -->
     <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css' />
-	
+	<script>
+  function resizeIframe(obj) {
+    obj.style.height = obj.contentWindow.document.body.scrollHeight + 'px';
+  }
+</script>
 
 </head>
 <body data-spy="scroll" data-target=".navbar-fixed-top">
@@ -243,12 +247,6 @@ if(!$_SESSION['loggedIn']) {
 			
 			</div>
 			<br>
-			<div class="form-group">
-					<label for="example-number-input" class="col-2 col-form-label">Number of pages</label>
-						<div class="col-10">
-							<input class="form-control" type="number" value="42" name="page_count" required>
-			</div>
-			
 			<div class="form-group"><br>
 				<label for="example-date-input" class="col-2 col-form-label" >Date for task to be claimed</label>
 					<div class="col-10">
@@ -304,6 +302,7 @@ if(!$_SESSION['loggedIn']) {
 					<br><br>
                </div>
 			   <iframe src="http://testweb3.csisad.ul.campus/modules/cs4014/group1/tasksadmin.php"  
+				frameborder="0" scrolling="no" onload="resizeIframe(this)"
 				style="width:100%;
 				 float:center;
 				 height:100%;
@@ -317,10 +316,12 @@ if(!$_SESSION['loggedIn']) {
           </section> 
     <!--END ABOUT SECTION-->
     <!--CONTACT SECTION-->
+	
          <section id="contact">
                <div class="container">
                      <div class="row text-center" >
                <div class="col-md-12">
+			 
                     <h1>CONTACT HERE</h1>
                </div>
 			   
@@ -331,6 +332,7 @@ if(!$_SESSION['loggedIn']) {
 	
            
         </div>
+		
 		<h3> How to reach us! </h3>
 
 

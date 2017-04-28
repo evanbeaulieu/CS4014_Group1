@@ -16,6 +16,11 @@ if($result->num_rows > 0) {
     if(password_verify($pwd, $hashedpwd)){//password_verify verifies the password against the hashed password
     $_SESSION['loggedIn'] = true;
     $_SESSION['student_id'] =  $row['idnum'];
+	$sql2 = "DELETE FROM task WHERE completed_at <= CURDATE()"; //checks to see if completed at date has been passed, if so deletes from the table
+
+	if(!$conn->query($sql2)) {
+    printf("Error:%s\n", $conn->error);
+	}
     header("Location: index12admin.php"); 
     exit;  
     }

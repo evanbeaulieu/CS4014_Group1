@@ -27,7 +27,7 @@
 		$claimed_at = $column['claimed_at'];
 		$completed_at = $column['completed_at'];
         $url = $column['url'];
-						
+					
 		echo  "<tr><td>$task_id</td>
 		<td>$task_title</td>
 		<td></td>
@@ -43,3 +43,4 @@
 		echo "</table>";
 			
 		?>
+	

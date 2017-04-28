@@ -58,11 +58,11 @@ if(!$conn->query($sql)) {
 }
 
 
-$sql = "DELETE FROM task WHERE completed_at <= CURDATE()"; //checks to see if completed at date has been passed, if so deletes from the table
+$sql1 = "DELETE FROM task WHERE completed_at <= CURDATE()"; //checks to see if completed at date has been passed, if so deletes from the table
 
-if(!$conn->query($sql)) {
+	if(!$conn->query($sql1)) {
     printf("Error:%s\n", $conn->error);
-}
+	}
 
 echo "<br>";
 echo("You have successfully uploaded.");
