@@ -31,6 +31,15 @@ if(!$_SESSION['loggedIn']) {
     obj.style.height = obj.contentWindow.document.body.scrollHeight + 'px';
   }
 </script>
+<script>
+function googleTranslateElementInit() {
+new google.translate.TranslateElement({
+pageLanguage: 'en',
+layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+}, 'google_translate_element');
+}
+</script><script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
 
 </head>
 <body data-spy="scroll" data-target=".navbar-fixed-top">
@@ -342,7 +351,7 @@ if(!$_SESSION['loggedIn']) {
 		Email: 15142151@studentmail.ie<br>
 		Address: B2005,Main Building, University of Limerick, Ireland<br>
 		</div>
- 
+ <div id="google_translate_element"></div>
 
 
   
